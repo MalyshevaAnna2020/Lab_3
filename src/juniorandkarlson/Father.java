@@ -16,5 +16,11 @@ public class Father extends Parent {
         setGender(Gender.MALE);
     }
 
+    @Override
+    public void laugh() {
+        this.laughTrue();
+        System.out.print("Тут папа рассмеялся " + say() + "\nРаз ");
+    }
+
 
 }

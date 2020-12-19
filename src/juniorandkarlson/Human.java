@@ -10,6 +10,7 @@ public abstract class Human implements Person{
     private boolean activity = false;
     private boolean laugh = false;
 
+    // Human
     public Human (String var1, int var2, boolean a){
         this.name = var1;
         setAge(var2);
@@ -37,6 +38,7 @@ public abstract class Human implements Person{
         this.setAge(var1);
     }
 
+    // из интерфейса Person
     public void setAge(int var1){
         if (var1 < 0){
             var1 = 20;
@@ -69,38 +71,30 @@ public abstract class Human implements Person{
         this.status = var1;
     }
 
-    @Override
     public boolean getActivity(){
         return(this.activity);
     }
 
-    @Override
     public boolean getLaugh() {
         return this.laugh;
     }
 
-    @Override
     public Status getStatus(){ return this.status; }
 
-    @Override
     public Gender getGender(){ return this.gender;}
 
-    @Override
     public Personality getPersonality(){
         return this.personality;
     }
 
-    @Override
-    public void LaughTrue(){
+    public void laughTrue(){
         this.laugh = true;
     }
 
-    @Override
-    public void LaughFalse(){
+    public void laughFalse(){
         this.laugh = false;
     }
 
-    @Override
     public int getAge(){ return this.age; }
 
     @Override
@@ -123,7 +117,7 @@ public abstract class Human implements Person{
 
     @Override
     public boolean equals(Object h){
-        return (h.hashCode() == this.hashCode());
+        return (this.hashCode() == h.hashCode());
     }
 
     @Override

@@ -17,4 +17,29 @@ public class Mother extends Parent{
         setGender(Gender.FEMALE);
     }
 
+    @Override
+    public String say() {
+        String s = "";
+        if (this.getLaugh()){
+            s = "и сказала:";
+            laughFalse();
+        }
+        return s;
+    }
+
+    @Override
+    public void laugh() {
+        this.laughTrue();
+        System.out.print("Тут мама рассмеялась " + say() + "\nРаз ");
+    }
+
+    @Override
+    public String good(){
+        return "хорошая.";
+    }
+
+    @Override
+    public String bad(){
+        return "плохая.";
+    }
 }

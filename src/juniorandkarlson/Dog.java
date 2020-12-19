@@ -9,13 +9,4 @@ public class Dog extends Human{
         this.setStatus(Status.DOG);
     }
 
-    @Override
-    public void Laugh() {
-
-    }
-
-    @Override
-    public void Thoughts() {
-
-    }
 }
